@@ -5,7 +5,7 @@
 
 #define MultiThreadInvocation
 
-static WasmEdge_Result mul(void* Data, const WasmEdge_CallingFrameContext* CallFrameCxt, const WasmEdge_Value* In, WasmEdge_Value* Out)
+WasmEdge_Result mul(void* Data, const WasmEdge_CallingFrameContext* CallFrameCxt, const WasmEdge_Value* In, WasmEdge_Value* Out)
 {
     int32_t Val = WasmEdge_ValueGetI32(In[0]);
     Out[0] = WasmEdge_ValueGenI32(Val * Val);
@@ -41,7 +41,7 @@ int main()
         server = WasmEdge_ModuleInstanceCreate(HostName);
         WasmEdge_StringDelete(HostName);
 
-        WasmEdge_Limit MemLimit = { .HasMax = true, .Shared = true, .Min = 2, .Max = 2 };
+        WasmEdge_Limit MemLimit = { .HasMax = true, .Shared = false, .Min = 1, .Max = 2 };
         WasmEdge_MemoryTypeContext* HostMType = WasmEdge_MemoryTypeCreate(MemLimit);
         WasmEdge_MemoryInstanceContext* HostMemory = WasmEdge_MemoryInstanceCreate(HostMType);
         WasmEdge_MemoryTypeDelete(HostMType);
