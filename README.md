@@ -2,7 +2,7 @@
 
 When using WasmEdge *Host Function* with *Threads proposal*, VM would meet some unknown errors.
 
-But when using *Host Function* with *Threads proposal* respectively, there is no errors happen.
+But when using *Host Function* or *Threads proposal* respectively, there is no errors happen.
 
 To repeat this result, you should have [WasmEdge](https://github.com/WasmEdge/WasmEdge) installed locally.
 
