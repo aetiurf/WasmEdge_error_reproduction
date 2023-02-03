@@ -6,6 +6,8 @@ But when using *Host Function* or *Threads proposal* respectively, there is no e
 
 To repeat this result, you should have [WasmEdge](https://github.com/WasmEdge/WasmEdge) installed locally.
 
+Now this is added as the [issue#2253](https://github.com/WasmEdge/WasmEdge/issues/2253) on WasmEdge/WasmEdge.
+
 ## *Host Function* + *Threads proposal* = error
 
 Uncomment line 6 of `reproduction.cpp`.
