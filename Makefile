@@ -1,7 +1,7 @@
 MAKE = make
 
 all: reproduction.cpp wat2so
-	g++ reproduction.cpp -lwasmedge -o reproduction -g
+	clang++ reproduction.cpp -lwasmedge -pthread -o reproduction -g
 
 cpp2so: func.cpp
 	clang++ func.cpp --target=wasm32 -emit-llvm -c -S
